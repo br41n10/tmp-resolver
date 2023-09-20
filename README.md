@@ -1,6 +1,6 @@
 # tmp-resolver
 
-该程序作为一个 dns server 运行，可以在控制台设置给定域名期望的 A记录、CNAME记录，对于未设置的域名，将递归解析并返回结果。
+该程序作为一个 dns server 运行，可以在交互式控制台设置给定域名期望的 A记录、CNAME记录，对于未设置的域名，将递归解析并返回结果。
 
 可以方便的应用于本地临时修改dns解析结果的场景，比如
 * 切换cdn、负载均衡服务时，本地先临时解析到新的 A、CNAME记录进行测试
@@ -24,7 +24,7 @@ It can used for:
 build and dns server with interactive console
 ``` bash
 go build .
-sudo ./tmpresolver
+sudo ./tmp-resolver
 ```
 
 如果要使用53端口，则需要以root权限运行。
